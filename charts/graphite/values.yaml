@@ -44,6 +44,20 @@ persistence:
   accessMode: ReadWriteOnce
   size: 10Gi
 
+readinessProbeConfig: {}
+  # initialDelaySeconds: 0
+  # periodSeconds: 10
+  # timeoutSeconds: 1
+  # successThreshold: 1
+  # failureThreshold: 3
+
+livenessProbeConfig: {}
+  # initialDelaySeconds: 0
+  # periodSeconds: 10
+  # timeoutSeconds: 1
+  # successThreshold: 1
+  # failureThreshold: 3
+
 resources: {}
   # limits:
   #  cpu: 500m

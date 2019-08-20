@@ -47,10 +47,16 @@ spec:
           httpGet:
             path: /
             port: graphite-gui
+{{- if .Values.livenessProbeConfig }}
+{{ toYaml .Values.livenessProbeConfig | indent 10 }}
+{{- end }}
         readinessProbe:
           httpGet:
             path: /
             port: graphite-gui
+{{- if .Values.readinessProbeConfig }}
+{{ toYaml .Values.readinessProbeConfig | indent 10 }}
+{{- end }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}
         volumeMounts:
